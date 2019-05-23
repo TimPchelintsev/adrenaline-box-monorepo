@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "name": "adrenaline-box-dev",
+  "alias": "adrenaline-box-dev.now.sh",
+  "builds": [
+    { "src": "server/api/**/*.js", "use": "@now/node" },
+    { "src": "www/package.json", "use": "@now/next" }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/server/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/www/$1",
+      "headers": {
+        "x-request-path": "$1"
+      }
+    }
+  ],
+  "env": {
+    "DATABASE_URL": "@adrenaline-database-url",
+    "STRIPE_WEBHOOK_SECRET": "@adrenaline-stripe-webhook-secret",
+    "STRIPE_SECRET": "@adrenaline-stripe-secret"
+  }
+}

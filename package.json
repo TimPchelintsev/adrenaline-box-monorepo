@@ -1,0 +1,11 @@
+{
+  "name": "adrenaline-box",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "workspaces": ["server", "www"],
+  "keywords": [],
+  "author": "Mattia Asti",
+  "license": "MIT"
+}

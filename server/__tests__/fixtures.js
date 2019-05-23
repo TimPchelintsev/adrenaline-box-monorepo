@@ -1,0 +1,38 @@
+module.exports = {
+  voucherInput: {
+    buyerName: 'Mattia',
+    buyerSurname: 'Asti',
+    buyerEmail: 'mattia.asti@gmail.com',
+    buyerPhone: 'mattia.asti@gmail.com',
+    boxType: 'SILVER',
+    participantName: 'Mario',
+    participantSurname: 'Rossi',
+    participantEmail: 'mattia.asti@gmail.com',
+    paymentMethod: 'CC',
+  },
+  location: {
+    id: 'ca5823ae-a35a-47d4-a263-02ff4546a211',
+    name: '',
+    address: 'via genzana 4',
+    city: 'lugano',
+    phone: '12344444',
+    latitude: 51,
+    longitude: 8,
+    openDays: {
+      mon: true,
+      tue: true,
+      wed: true,
+      thu: true,
+      fri: true,
+      sat: true,
+      sun: true,
+    },
+    ownerName: 'ownerName',
+    ownerEmail: 'owner@example.com',
+  },
+  session: voucherId => ({
+    id: voucherId,
+    client_reference_id: voucherId,
+    display_items: [{ amount: 15000 }],
+  }),
+};
